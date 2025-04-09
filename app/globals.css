@@ -1,0 +1,661 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nigeria-green: #008751;
+  --nigeria-black: #000000;
+  --nigeria-white: #ffffff;
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-block px-4 py-2 rounded font-bold cursor-pointer transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-white text-ng-green hover:bg-opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white border-2 border-white hover:bg-white hover:bg-opacity-10;
+  }
+
+  .card {
+    @apply border-2 border-ng-green rounded-lg p-6 mb-6 bg-white transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg flex flex-col h-full;
+  }
+
+  .card-title {
+    @apply text-xl font-bold mb-4 text-ng-green;
+  }
+
+  .card-footer {
+    @apply mt-auto text-right;
+  }
+
+  .section-title {
+    @apply text-3xl text-ng-green text-center my-10 font-bold relative;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply block w-20 h-1 bg-ng-green mx-auto mt-2;
+  }
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: var(--nigeria-white);
+  line-height: 1.6;
+}
+
+/* Responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--nigeria-green);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inner {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--nigeria-green);
+  border-radius: 50%;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.navbar-link:hover {
+  opacity: 0.8;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--nigeria-black);
+  color: white;
+  padding: 3rem 0 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid var(--nigeria-green);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.footer-section li {
+  margin-bottom: 0.75rem;
+  
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  
+}
+
+.footer-section a:hover {
+  color: var(--nigeria-green);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--nigeria-green);
+  color: white;
+  padding: 4rem 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-circle {
+  width: 16rem;
+  height: 16rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner-circle {
+  width: 12rem;
+  height: 12rem;
+  background-color: var(--nigeria-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--nigeria-green);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+.countdown-item {
+  background-color: #f0f9f4;
+  color: var(--nigeria-black);
+  border: 2px solid var(--nigeria-green);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--nigeria-green);
+  line-height: 1;
+}
+
+.countdown-label {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--nigeria-black);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Cards */
+.card {
+  border: 2px solid var(--nigeria-green);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--nigeria-green);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-footer {
+  margin-top: auto;
+  text-align: right;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--nigeria-green);
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--nigeria-green);
+  margin: 0.5rem auto 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.note-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Profile cards */
+.profile-card {
+  border: 2px solid var(--nigeria-green);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #666;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.profile-title {
+  color: var(--nigeria-green);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.profile-description {
+  text-align: left;
+}
+
+/* Organization cards */
+.organization-card {
+  border: 2px solid var(--nigeria-green);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+}
+
+.organization-title {
+  color: var(--nigeria-green);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.organization-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.organization-description {
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+  color: var(--nigeria-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes */
+.text-green {
+  color: var(--nigeria-green);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-circle {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .hero-inner-circle {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu-open .navbar-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--nigeria-green);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .countdown-item {
+    min-width: 100px;
+    padding: 1rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdown-item {
+    min-width: 80px;
+    padding: 0.75rem;
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 280px) {
+  .hero-title {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 240px) {
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.6rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.5rem;
+  }
+}

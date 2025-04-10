@@ -21,7 +21,7 @@ export default function DemocracyMovementsPage() {
         "The independence movement laid the foundation for Nigeria as a sovereign nation and established the initial political structures that would shape the country's future. The leaders of this movement are revered as founding fathers of modern Nigeria.",
     },
     {
-      id: "pro-democracy",
+      id: "democracy",
       name: "Pro-Democracy Movement",
       period: "1980s-1999",
       leaders: ["Wole Soyinka", "Gani Fawehinmi", "Beko Ransome-Kuti", "Ken Saro-Wiwa", "Alao Aka-Bashorun"],

@@ -77,7 +77,7 @@ export default function PresidentsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Past Presidents of Nigeria</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Presidents of Nigeria</h1>
 
       <div className="space-y-8">
         {presidents.map((president) => (

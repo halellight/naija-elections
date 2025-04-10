@@ -41,7 +41,7 @@ export default function PoliticalPartiesPage() {
         "The Labour Party experienced a surge in popularity during the 2023 presidential election with Peter Obi as its candidate. While it did not win the presidency, the party secured several seats in both the Senate and House of Representatives, establishing itself as a significant political force in Nigeria.",
     },
     {
-      id: "nnpp",
+      id: "others",
       name: "New Nigeria People's Party (NNPP)",
       founded: "2021",
       ideology: "Populist, Reformist",
@@ -53,7 +53,7 @@ export default function PoliticalPartiesPage() {
         "The NNPP participated in its first presidential election in 2023 with Rabiu Kwankwaso as its candidate. While it did not win the presidency, the party secured some seats in the National Assembly and has a strong presence in Kano State.",
     },
     {
-      id: "apga",
+      id: "others",
       name: "All Progressives Grand Alliance (APGA)",
       founded: "2003",
       ideology: "Progressive, Regionalist",

@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="space-y-6">
         <section>
           <p className="mb-4">
-            <strong>Last Updated:</strong> January 15, 2024
+            <strong>Last Updated:</strong> April 10, 2025
           </p>
           <p className="mb-4">
             Nigeria Elections ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy
